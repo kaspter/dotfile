@@ -1,0 +1,173 @@
+
+"====================================================================
+" .vimrc file
+" Kapster Ju <nigh0st3018@gmail.com>
+"
+"
+"====================================================================
+
+set nocompatible
+
+" Pathogen
+call pathogen#infect()        " add .vim/bundle subdirs to runtime path
+call pathogen#helptags()      " auto update help tags for each directory in runtimepath
+
+"====================================================================
+"                 Status Line Custom
+"====================================================================
+" cf the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+" format markers:
+"   %< truncation point
+"   %n buffer number
+"   %f relative path to file
+"   %m modified flag [+] (modified), [-] (unmodifiable) or nothing
+"   %r readonly flag [RO]
+"   %y filetype [ruby]
+"   %= split point for left and right justification
+"   %-35. width specification
+"   %l current line number
+"   %L number of lines in buffer
+"   %c current column number
+"   %V current virtual column number (-n), if different from %c
+"   %P percentage through buffer
+"   %) end of width specification
+set laststatus=2              " always show status line
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+
+
+set number
+set ruler
+
+set mouse=a
+set mousehide             " hide mouse pointer in insert mode
+
+set hlsearch              " search highlight
+set incsearch             " incremental search ("find as you type")
+
+set showmatch
+
+set history=1000          " longer search and command history (default is 20)
+set cursorline            " highlight current line
+
+
+set backspace=2           " make backspace work for line breaks, auto-indentation, etc
+
+if has("unnamedplus")
+  set clipboard=unnamedplus
+elseif has("clipboard")
+  set clipboard=unnamed
+endif
+
+
+"set paste         " remove extra white spaces when pasting code from other file
+set nopaste
+
+
+
+"====================================================================
+"                 Code Folding  :help fold.txt/fold
+" Fold commands"
+" zc - folding under cursor
+" zo - unfolding under cursor
+" zM - folding all folds
+" zR - unfolding all folds
+" Tunning : http://arun.wordpress.com/2009/04/10/c-and-vim/
+"====================================================================
+set foldmethod=indent           " indent based on indent
+set foldlevel=99                "
+set foldnestmax=10
+set nofoldenable                " disable fold by default
+map zz zjzo                     " go to next fold and open it
+
+
+
+"===========================================================================
+"                 Backup and Swap Setting
+"===========================================================================
+set backupdir=~/.vim/tmp          " keep backup files out of the way
+set directory=~/.vim/tmp          " keep swap files out of the way
+set nobackup
+set noswapfile
+
+
+
+" All languages default
+set expandtab              " always use spaces instead of tabs
+set shiftwidth=2           " spaces per tab (when shifting)
+set shiftround             " always indent by multiple of shiftwidth
+set tabstop=2              " spaces pre tab
+set softtabstop=4
+set autoindent             " auto-ident
+set smartindent
+set textwidth=80           " auto-wrap at 80 cols
+set cc=80                  " show border at 80 cols
+nore ; :                   " make ; do the same as : for quick-typing
+
+set wildignore+=*.o,.git   " patterns to ignore during file-navigation
+set autoread               " if not changed in Vim, auto pick up changes after "git commit", etc
+
+
+" Automatic, language-dependent indentation, syntax coloring and other functionality
+filetype plugin indent on
+syntax on
+
+
+" Remove trailing whitespace automatically
+autocmd BufWritePre * :%s/\s\+$//e
+
+" git commit messages
+autocmd FileType gitcommit setlocal textwidth=72
+
+" C
+autocmd FileType c set tabstop=4
+autocmd FileType c set shiftwidth=4
+
+" CPP
+autocmd FileType cpp set tabstop=4
+autocmd FileType cpp set shiftwidth=4
+
+" PHP
+autocmd FileType php set tabstop=2
+autocmd FileType php set shiftwidth=2
+
+" Python
+autocmd FileType python set tabstop=4
+autocmd FileType python set shiftwidth=4
+
+" Ruby
+autocmd FileType ruby set tabstop=2
+autocmd FileType ruby set shiftwidth=2
+
+
+" Nerdtree
+autocmd vimenter * NERDTree
+let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
+
+
+set background=dark
+colorscheme desert
+
+
+"====================================================================
+"                 Keys Mapping
+"====================================================================
+
+" 87% user use jj to exit from insert mode
+imap jj <Esc>
+
+" Disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>

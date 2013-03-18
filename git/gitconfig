@@ -1,0 +1,53 @@
+[color]
+	ui = auto
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = yellow
+[core]
+#	editor = gedit
+	editor = vim
+	autocrlf = input
+	safecrlf = true
+# for windows
+#	autocrlf = true
+#	safecrlf = true
+[user]
+	name = Kaspter Ju\n
+	email = nigh0st3018@gmail.com
+[push]
+	default = current
+
+[apply]
+# Detect whitespace errors when applying a patch
+	whitespace = fix
+
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
+	branches = "!sh -c 'git branch --list --no-color | \
+				sed -e \"s/*/ /\" | \
+				while read branch; do \
+				git log -1 --format=format:\"$branch:|%s|%h|%ar\n\" $branch; done | \
+				column -t -s\"|\"'"
+
+	branches-notsorted = "!sh -c 'git branch --list --no-color | \
+						sed -e \"s/*/ /\" | \
+						while read branch; do \
+						git log -1 --format=format:\"%ct %Cred$branch:%Cblue %s %Cgreen%h%Creset (%ar)\n\" $branch; \
+						done'"
+	branch-info = "!sh -c 'git branches-notsorted | sort | cut -d\" \" -f2-'"
+
+# git clone --bare repo repo.git
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpuser = nigh0st3018@gmail.com
+	smtpencryption = tls
+	smtpserverport = 587
+	from = nigh0st3018@gmail.com

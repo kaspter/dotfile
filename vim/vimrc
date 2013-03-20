@@ -49,6 +49,8 @@ set showmatch
 set history=1000          " longer search and command history (default is 20)
 set cursorline            " highlight current line
 
+set title                 " always show title
+set titleold=Terminal
 
 set backspace=2           " make backspace work for line breaks, auto-indentation, etc
 

@@ -1,0 +1,26 @@
+
+
+# tries ~/.ssh/id/hostname/remoteusername/id_* first,
+# then ~/.ssh/id/hostname/id_*,
+# then the defaults before giving up.
+#
+
+#PreferredAuthentications publickey
+
+IdentityFile ~/.ssh/id/%h/%r/id_rsa
+IdentityFile ~/.ssh/id/%h/%r/id_dsa
+IdentityFile ~/.ssh/id/%h/id_rsa
+IdentityFile ~/.ssh/id/%h/id_dsa
+IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/id_dsa
+
+
+
+#################################################
+Host github-kaspter
+	User git
+	HostName github.com
+#################################################
+
+
+

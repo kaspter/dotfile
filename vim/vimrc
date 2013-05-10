@@ -102,7 +102,7 @@ set softtabstop=4
 set autoindent             " auto-ident
 set smartindent
 set textwidth=80           " auto-wrap at 80 cols
-set cc=80                  " show border at 80 cols
+" set cc=80                  " show border at 80 cols
 nore ; :                   " make ; do the same as : for quick-typing
 
 set wildignore+=*.o,.git   " patterns to ignore during file-navigation
@@ -166,11 +166,11 @@ colorscheme desert
 imap jj <Esc>
 
 " Disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>

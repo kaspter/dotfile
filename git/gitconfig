@@ -13,7 +13,7 @@
 #	autocrlf = true
 #	safecrlf = true
 [user]
-	name = Kaspter Ju\n
+	name = Kaspter Ju
 	email = nigh0st3018@gmail.com
 [push]
 	default = current

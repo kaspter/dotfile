@@ -64,6 +64,8 @@ endif
 "set paste         " remove extra white spaces when pasting code from other file
 set nopaste
 
+" try utf8 first then chinese gbk
+set fileencodings=utf8,gbk
 
 
 "====================================================================

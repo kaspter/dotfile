@@ -10,7 +10,7 @@ set rec pack 1000
 set send pack 1000
 set window 5
 
-.current := ~/log
+.current := ~/opt/log
 
 .logfile := \v(ndate)-\v(time).log
 .mode    := new

@@ -52,3 +52,6 @@
 	smtpencryption = tls
 	smtpserverport = 587
 	from = nigh0st3018@gmail.com
+[http]
+    sslverify = false
+    #sslcainfo = /bin/curl-ca-bundle.crt

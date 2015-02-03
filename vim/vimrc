@@ -36,9 +36,14 @@ set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 
 set number
-set ruler
+set ruler                 " show the cursor position all the time
+set showcmd               " display incomplete commands
 
-set mouse=a
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
 set mousehide             " hide mouse pointer in insert mode
 
 set hlsearch              " search highlight
@@ -114,6 +119,10 @@ set autoread               " if not changed in Vim, auto pick up changes after "
 " Automatic, language-dependent indentation, syntax coloring and other functionality
 filetype plugin indent on
 syntax on
+
+" For all text files set 'textwidth' to 78 characters.
+autocmd FileType text setlocal textwidth=78
+
 
 
 " Remove trailing whitespace automatically

@@ -156,6 +156,9 @@ autocmd FileType ruby set shiftwidth=2
 autocmd vimenter * NERDTree
 autocmd vimEnter * wincmd p
 let NERDTreeShowBookmarks=1
+" let NERDTreeShowLineNumbers=1
+let NERDTreeWinPos="left"
+let NERDTreeWinSize=24
 let NERDTreeChDirMode=0
 let NERDTreeQuitOnOpen=0
 let NERDTreeMouseMode=2
@@ -177,13 +180,13 @@ let Tlist_Show_Menu=1
 let Tlist_Max_Submenu_Items=10
 let Tlist_Max_Tag_length=20
 let Tlist_Use_SingleClick=0
-let Tlist_Auto_Open=0
+let Tlist_Auto_Open=1
 let Tlist_Close_On_Select=0
 let Tlist_File_Fold_Auto_Close=1
 let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Process_File_Always=1
 let Tlist_WinHeight=10
-let Tlist_WinWidth=45
+let Tlist_WinWidth=30
 let Tlist_Use_Horiz_Window=0
 nmap <F3> :Tlist<CR>
 

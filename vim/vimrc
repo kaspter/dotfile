@@ -155,7 +155,7 @@ autocmd FileType ruby set shiftwidth=2
 " Nerdtree
 autocmd vimenter * NERDTree
 autocmd vimEnter * wincmd p
-let NERDTreeShowBookmarks=1
+let NERDTreeShowBookmarks=0
 " let NERDTreeShowLineNumbers=1
 let NERDTreeWinPos="left"
 let NERDTreeWinSize=24

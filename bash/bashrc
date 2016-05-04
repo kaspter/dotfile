@@ -1,0 +1,79 @@
+
+
+
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+
+
+android_ndk="$HOME/opt/android/android-ndk-r11c"
+if [ -d "${android_ndk}" ]; then
+    export ANDROID_NDK=${android_ndk}
+fi
+
+android_sdk="$HOME/opt/android/android-sdk-linux"
+if [ -d "${android_sdk}" ]; then
+    export ANDROID_SDK=${android_sdk}
+    PATH=$PATH:$ANDROID_SDK/tools
+fi
+
+sci_home="$HOME/opt/scitools"
+if [ -d "${sci_home}" ]; then
+    STIHOME=${sci_home}
+fi
+
+depot_tools="$HOME/opt/depot_tools"
+if [ -d "${depot_tools}" ]; then
+    PATH="${depot_tools}:$PATH"
+fi
+
+gcc_hisilin="$HOME/opt/arm-hisiv100-linux/bin"
+if [ -d "${gcc_hisilin}" ]; then
+    PATH="${gcc_hisilin}:$PATH"
+fi
+
+gcc_linaro="$HOME/opt/gcc-linaro/bin"
+if [ -d "${gcc_linaro}" ]; then
+    PATH="${gcc_linaro}:$PATH"
+fi
+
+opt_bin="$HOME/opt/bin"
+if [ -d "${opt_bin}" ]; then
+    PATH="${opt_bin}:$PATH"
+fi
+
+komodo_bin="$HOME/opt/Komodo/bin"
+if [ -d "${komodo_bin}" ]; then
+    PATH="$PATH:${opt_bin}:"
+fi
+
+
+#export PATH=$PATH:$ANDROID_NDK
+#export PATH=$PATH:$ARM_TOOLSCHAIN
+
+#source ~/bin/bash_prompt.sh
+
+# for local include file. DO NOT ADD ':'
+# http://www.network-theory.co.uk/docs/gccintro/gccintro_23.html
+#export C_INCLUDE_PATH=~/bin
+#export CPLUS_INCLUDE_PATH=~/bin
+
+# ssh -CfNg -D 127.0.0.1:1080 kaspter@108.171.248.180
+# ssh -CfNgR -D 127.0.0.1:1080 kaspter@108.171.248.180
+
+
+# ssh Reverse Connection
+# ssh -NfR 1234:localhost:22 jilong@220.115.248.90 -p22
+# ssh jetlab@127.0.0.1 -p1234
+
+#autossh
+
+# autossh -v -NR 10111:localhost:22 jilong@220.115.248.90 -p22
+
+
+#amlogic
+
+#source /Data/bin/amlogic/arm_path.sh
+#source /Data/bin/amlogic/arc_gnutools.sh

@@ -1,12 +1,20 @@
 ---
 Language:        Cpp
 # BasedOnStyle:  WebKit
+
+IndentWidth:     4
+IndentCaseLabels: false
+IndentWrappedFunctionNames: false
+
 AccessModifierOffset: -4
-AlignAfterOpenBracket: DontAlign
-AlignConsecutiveAssignments: false
-AlignConsecutiveDeclarations: false
+AlignAfterOpenBracket: Align
+
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+
 AlignEscapedNewlinesLeft: false
 AlignOperands:   false
+
 AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: true
 AllowShortBlocksOnASingleLine: false
@@ -14,12 +22,16 @@ AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
+
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: false
 AlwaysBreakTemplateDeclarations: false
 BinPackArguments: true
 BinPackParameters: true
+
+BreakBeforeBraces: Custom
+#BreakBeforeBraces: WebKit
 BraceWrapping:   
   AfterClass:      false
   AfterControlStatement: false
@@ -33,9 +45,9 @@ BraceWrapping:
   BeforeElse:      false
   IndentBraces:    false
 BreakBeforeBinaryOperators: All
-BreakBeforeBraces: WebKit
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializersBeforeComma: true
+
 ColumnLimit:     0
 CommentPragmas:  '^ IWYU pragma:'
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
@@ -53,9 +65,6 @@ IncludeCategories:
     Priority:        3
   - Regex:           '.*'
     Priority:        1
-IndentCaseLabels: false
-IndentWidth:     4
-IndentWrappedFunctionNames: false
 KeepEmptyLinesAtTheStartOfBlocks: true
 MacroBlockBegin: ''
 MacroBlockEnd:   ''

@@ -7,6 +7,10 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 
+if [ -f ~/.bash ]; then
+    . ~/.bash
+fi
+
 
 android_ndk="$HOME/opt/android/android-ndk-r11c"
 if [ -d "${android_ndk}" ]; then

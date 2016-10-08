@@ -8,7 +8,7 @@
 #	editor = gedit
 	editor = vim
 	autocrlf = false
-	fileMode = false
+	fileMode = true
 	safecrlf = true
 # for windows
 #	autocrlf = true

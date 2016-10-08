@@ -8,14 +8,14 @@
 #	editor = gedit
 	editor = vim
 	autocrlf = false
-	fileMode = true
+	fileMode = false
 	safecrlf = true
 # for windows
 #	autocrlf = true
 #	safecrlf = true
 [user]
 	name = Kaspter Ju
-	email = kaspter@ucheer.org
+	email = kaspter@kmatt.net
 [push]
 	default = current
 
@@ -55,3 +55,5 @@
 [http]
     sslverify = false
     #sslcainfo = /bin/curl-ca-bundle.crt
+[diff]
+	renames = true

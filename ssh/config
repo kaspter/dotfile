@@ -5,6 +5,10 @@
 # then the defaults before giving up.
 #
 
+
+# fix key permission
+# find . -name "id_rsa*" -type f | xargs chmod 600
+
 #PreferredAuthentications publickey
 
 IdentityFile ~/.ssh/id/%h/%r/id_rsa

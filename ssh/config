@@ -12,11 +12,11 @@
 #PreferredAuthentications publickey
 
 IdentityFile ~/.ssh/id/%h/%r/id_rsa
-IdentityFile ~/.ssh/id/%h/%r/id_dsa
+#IdentityFile ~/.ssh/id/%h/%r/id_dsa
 IdentityFile ~/.ssh/id/%h/id_rsa
-IdentityFile ~/.ssh/id/%h/id_dsa
+#IdentityFile ~/.ssh/id/%h/id_dsa
 IdentityFile ~/.ssh/id_rsa
-IdentityFile ~/.ssh/id_dsa
+#IdentityFile ~/.ssh/id_dsa
 
 
 

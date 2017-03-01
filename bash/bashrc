@@ -132,6 +132,7 @@ fi
 android_ndk="$HOME/opt/android/android-ndk-r13"
 if [ -d "${android_ndk}" ]; then
     export ANDROID_NDK=${android_ndk}
+    PATH=$PATH:$ANDROID_NDK
 fi
 
 android_sdk="$HOME/opt/android/android-sdk-linux"

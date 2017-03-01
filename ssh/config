@@ -19,6 +19,10 @@ IdentityFile ~/.ssh/id_rsa
 #IdentityFile ~/.ssh/id_dsa
 
 
+# keep session alive
+ServerAliveInterval 60
+ServerAliveCountMax 3
+
 
 #################################################
 Host github-kaspter

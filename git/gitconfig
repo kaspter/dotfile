@@ -1,11 +1,18 @@
 [color]
 	ui = auto
+	grep = auto
+	diff = auto
+	status = auto
+
+[color "grep"]
+	linenumber = yellow
+
 [color "branch"]
 	current = green reverse
 	local = green
 	remote = yellow
+
 [core]
-#	editor = gedit
 	editor = vim
 	autocrlf = false
 	fileMode = true
@@ -13,15 +20,32 @@
 # for windows
 #	autocrlf = true
 #	safecrlf = true
+
 [user]
 	name = Kaspter Ju
 	email = kaspter@kmatt.net
+
 [push]
 	default = current
 
 [apply]
 # Detect whitespace errors when applying a patch
 	whitespace = fix
+
+# git clone --bare repo repo.git
+[sendemail]
+	smtpserver = smtp.ucheer.org
+	smtpuser = kaspter@ucheer.org
+	smtpencryption = tls
+	smtpserverport = 587
+	from = Kaspter@ucheer.org
+
+[http]
+    sslverify = false
+    #sslcainfo = /bin/curl-ca-bundle.crt
+
+[diff]
+	renames = true
 
 [alias]
 	co = checkout
@@ -44,16 +68,3 @@
 						git log -1 --format=format:\"%ct %Cred$branch:%Cblue %s %Cgreen%h%Creset (%ar)\n\" $branch; \
 						done'"
 	branch-info = "!sh -c 'git branches-notsorted | sort | cut -d\" \" -f2-'"
-
-# git clone --bare repo repo.git
-[sendemail]
-	smtpserver = smtp.ucheer.org
-	smtpuser = kaspter@ucheer.org
-	smtpencryption = tls
-	smtpserverport = 587
-	from = Kaspter@ucheer.org
-[http]
-    sslverify = false
-    #sslcainfo = /bin/curl-ca-bundle.crt
-[diff]
-	renames = true

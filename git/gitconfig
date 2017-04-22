@@ -42,6 +42,7 @@
 
 [http]
     sslverify = false
+	postBuffer = 524288000
     #sslcainfo = /bin/curl-ca-bundle.crt
 
 [diff]
@@ -51,6 +52,7 @@
 	co = checkout
 	ci = commit
 	st = status
+	si = status --ignored
 	br = branch -av
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t

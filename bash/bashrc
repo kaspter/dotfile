@@ -129,13 +129,13 @@ fi
 ###############################################################################
 ###############################################################################
 ###############################################################################
-android_ndk="$HOME/opt/android/android-ndk-r13"
+android_ndk="$HOME/opt/toolkit/sdk/android/android-ndk-r13"
 if [ -d "${android_ndk}" ]; then
     export ANDROID_NDK=${android_ndk}
     PATH=$PATH:$ANDROID_NDK
 fi
 
-android_sdk="$HOME/opt/android/android-sdk-linux"
+android_sdk="$HOME/opt/toolkit/sdk/android/android-sdk-linux"
 if [ -d "${android_sdk}" ]; then
     export ANDROID_SDK=${android_sdk}
     PATH=$PATH:$ANDROID_SDK/tools
@@ -146,12 +146,12 @@ if [ -d "${sci_home}" ]; then
     STIHOME=${sci_home}
 fi
 
-gcc_linaro_arm="$HOME/opt/gcc-linaro/gcc_linaro_arm/bin"
+gcc_linaro_arm="$HOME/opt/toolkit/toolchain/gcc-linaro/gcc_linaro_arm/bin"
 if [ -d "${gcc_linaro_arm}" ]; then
     PATH="${gcc_linaro_arm}:$PATH"
 fi
 
-gcc_linaro_aarch="$HOME/opt/gcc-linaro/gcc_linaro_aarch/bin"
+gcc_linaro_aarch="$HOME/opt/toolkit/toolchain/gcc-linaro/gcc_linaro_aarch/bin"
 if [ -d "${gcc_linaro_aarch}" ]; then
     PATH="${gcc_linaro_aarch}:$PATH"
 fi

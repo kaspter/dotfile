@@ -23,7 +23,7 @@
 
 [user]
 	name = Kaspter Ju
-	email = kaspter@kmatt.net
+	email = camus@rtavs.com
 
 [push]
 	default = current
@@ -42,7 +42,7 @@
 
 [http]
     sslverify = false
-	postBuffer = 524288000
+	postBuffer = 1048576000
     #sslcainfo = /bin/curl-ca-bundle.crt
 
 [diff]

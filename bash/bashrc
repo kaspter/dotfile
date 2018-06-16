@@ -194,3 +194,17 @@ fi
 
 #source /Data/bin/amlogic/arm_path.sh
 #source /Data/bin/amlogic/arc_gnutools.sh
+
+alias amd64@xenial='/Repos/linuxos/rtavs.com/nelinx-linux/nelinx-docker/docker-shell amd64 xenial'
+alias amd64@binoic='/Repos/linuxos/rtavs.com/nelinx-linux/nelinx-docker/docker-shell amd64 bionic'
+alias amd64@stretch='/Repos/linuxos/rtavs.com/nelinx-linux/nelinx-docker/docker-shell amd64 stretch'
+
+alias arm32@xenial='/Repos/linuxos/rtavs.com/nelinx-linux/nelinx-docker/docker-shell arm32 xenial'
+alias arm32@binoic='/Repos/linuxos/rtavs.com/nelinx-linux/nelinx-docker/docker-shell arm32 bionic'
+
+alias arm64@xenial='/Repos/linuxos/rtavs.com/nelinx-linux/nelinx-docker/docker-shell arm64 xenial'
+alias arm64@binoic='/Repos/linuxos/rtavs.com/nelinx-linux/nelinx-docker/docker-shell arm64 bionic'
+
+
+
+

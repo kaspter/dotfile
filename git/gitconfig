@@ -17,6 +17,7 @@
 	autocrlf = false
 	fileMode = true
 	safecrlf = true
+	quotepath = false
 # for windows
 #	autocrlf = true
 #	safecrlf = true
@@ -50,7 +51,10 @@
 
 [alias]
 	co = checkout
+	cp = cherry-pick
 	ci = commit
+	sm = commit -sm
+	mm = commit --amend -s
 	st = status
 	si = status --ignored
 	br = branch -avv

@@ -129,7 +129,8 @@ autocmd FileType text setlocal textwidth=78
 autocmd BufWritePre * :%s/\s\+$//e
 
 " git commit messages
-autocmd FileType gitcommit setlocal textwidth=72
+autocmd FileType gitcommit setlocal spell textwidth=72
+
 
 " C
 autocmd FileType c set tabstop=4

@@ -22,6 +22,9 @@
 #	autocrlf = true
 #	safecrlf = true
 
+[commit]
+	template = ~/.gitmessage
+
 [user]
 	name = Kaspter Ju
 	email = camus@rtavs.com

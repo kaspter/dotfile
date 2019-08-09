@@ -58,7 +58,7 @@
 	st = status
 	si = status --ignored
 	br = branch -avv
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	hlog = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
 	sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -

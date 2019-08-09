@@ -53,7 +53,7 @@
 	ci = commit
 	st = status
 	si = status --ignored
-	br = branch -av
+	br = branch -avv
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p

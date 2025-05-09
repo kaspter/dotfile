@@ -12,7 +12,7 @@ set window 5
 
 .current := ~/opt/log
 
-.logfile := \v(ndate)-\v(time).log
+.logfile := \v(ndate)-\fsubstr(\v(time),1,2)\fsubstr(\v(time),4,2)\fsubstr(\v(time),7,2).log
 .mode    := new
 
 
